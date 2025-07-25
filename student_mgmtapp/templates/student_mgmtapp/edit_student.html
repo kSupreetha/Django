@@ -1,0 +1,10 @@
+<h2>Edit Student</h2>
+<a href="{% url 'home' %}">Home</a>
+<form method="post">
+    {% csrf_token %}
+    Name: <input type="text" name="name" value="{{ student.name }}"><br>
+    Email: <input type="email" name="email" value="{{ student.email }}"><br>
+    Roll No: <input type="text" name="roll_no" value="{{ student.roll_no }}"><br>
+    Course: <input type="text" name="course" value="{{ student.course }}"><br>
+    <input type="submit" value="Update Student">
+</form>

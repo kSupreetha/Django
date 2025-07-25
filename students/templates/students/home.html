@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Management System</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+            color: #333;
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 100px;
+            font-size: 2.5em;
+            color: #2c3e50;
+        }
+
+        .nav-links {
+            margin-top: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            background-color: #3498db;
+            padding: 12px 25px;
+            margin: 0 15px;
+            border-radius: 8px;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: #2980b9;
+        }
+
+        .fade-in {
+            animation: fadeIn 2s ease-in;
+        }
+
+        @keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+    </style>
+</head>
+<body>
+    <h2 class="fade-in">Welcome to Student Management System</h2>
+    <div class="nav-links fade-in">
+        <a href="{% url 'student_list' %}">View Students</a>
+        <a href="{% url 'add_student' %}">Add Student</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log("Student Management System Loaded Successfully!");
+        });
+    </script>
+</body>
+</html>
